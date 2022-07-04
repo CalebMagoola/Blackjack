@@ -38,7 +38,7 @@ public class Blackjack {
 		}
 	}
 	while (countHand(compHand) < 17) {
-			addCard(compHand, deck.nextCard());
+		addCard(compHand, deck.nextCard());
 		}
 	if(countHand(userHand) > 21) {
 		System.out.println("You went over 21. You lose :(");
@@ -98,15 +98,13 @@ public class Blackjack {
 	}
 	
 	public static String printHand(Card [] hand, int index) {
-		if(index > hand.length) {
+		if(index > hand.length)
 			return "";
-		}
 		else {
-			if(hand[index] != null) {
+			if(hand[index] != null)
 				return hand[index] + "\n" + printHand(hand, index+1);
-			}
 			else
 				return "";
-			}
+			
 		}
 	}
